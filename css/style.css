@@ -73,3 +73,46 @@ p {
     gap: 10px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
+.iframe-wrap {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.iframe-wrap iframe {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* מסכים קטנים */
+@media (max-width: 600px) {
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+/* מסכים גדולים */
+@media (min-width: 1000px) {
+    main {
+        max-width: 1200px;
+        margin: auto;
+    }
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
