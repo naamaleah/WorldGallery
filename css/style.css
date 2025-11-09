@@ -43,3 +43,33 @@ p {
 .nav-menu a:hover {
     background: #eee;
 }
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* עיצוב טופס */
+.contact-form {
+    max-width: 400px;
+    background: #fff;
+    padding: 20px;
+    margin: auto;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
