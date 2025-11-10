@@ -225,3 +225,68 @@ html, body {
     font-weight: 700;
     margin: 0;
 }
+
+/* CONTACT PAGE */
+.contact-container {
+    max-width: 650px;
+    margin: auto;
+    padding: 60px 20px 80px;
+    text-align: center;
+}
+
+.contact-text {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    text-align: left;
+    font-weight: bold;
+    color: #00796b;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    border: 1px solid #cce8e2;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+    transition: 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #00bfa5;
+    box-shadow: 0 0 5px rgba(0, 191, 165, 0.4);
+}
+
+.send-btn {
+    background: #00bfa5;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    background: #009e88;
+}
