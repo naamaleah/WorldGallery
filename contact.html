@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | WorldGallery</title>
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -25,43 +26,47 @@
 <section class="contact-container">
 
     <h2 class="page-title">Contact Us</h2>
-    <p class="contact-text">
+    <p class="contact-text" id="form-desc">
         Have a question, suggestion, or want to send us your photos?
         We'd love to hear from you!
     </p>
 
     <!-- CONTACT FORM -->
-    <form class="contact-form">
-
+    <form class="contact-form" id="contact-form" onsubmit="showSuccess(event)">
         <label>Full Name:</label>
         <input type="text" placeholder="Enter your name" required>
 
         <label>Email:</label>
         <input type="email" placeholder="Enter your email" required>
 
-        <label>Choose Category:</label>
-        <select>
-            <option>Sea</option>
-            <option>Forest</option>
-            <option>Mountains</option>
-            <option>Desert</option>
-            <option>City</option>
-            <option>Snow</option>
-            <option>Waterfalls</option>
-        </select>
-
         <label>Message:</label>
         <textarea placeholder="Write your message..." rows="5" required></textarea>
 
         <button type="submit" class="send-btn">Send Message</button>
-
     </form>
+
+    <!-- ✓ Checkmark -->
+    <div id="checkmark">✓</div>
 
 </section>
 
 <footer class="footer">
     © All Rights Reserved - WorldGallery
 </footer>
+
+<script>
+function showSuccess(event) {
+    event.preventDefault();
+
+    // מסתיר את הטופס ואת הטקסט
+    document.getElementById("contact-form").style.display = "none";
+    document.getElementById("form-desc").style.display = "none";
+
+    // מציג וי גדול
+    const mark = document.getElementById("checkmark");
+    mark.style.display = "block";
+}
+</script>
 
 </body>
 </html>
