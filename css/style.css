@@ -633,3 +633,30 @@ input[name="filter"] {
 #desert:checked    ~ .gallery-grid .image-card.desert { display: flex; }
 #city:checked      ~ .gallery-grid .image-card.city { display: flex; }
 #snow:checked      ~ .gallery-grid .image-card.snow { display: flex; }
+
+
+.sound-box {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.sound-box p {
+    font-size: 18px;
+    color: #008f83;
+    margin-bottom: 10px;
+}
+
+.sound-btn {
+    background: #008f83;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    font-size: 17px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.sound-btn:hover {
+    background: #049e6a;
+}
