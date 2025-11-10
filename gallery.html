@@ -24,16 +24,28 @@
 
 <h2 class="page-title">Gallery by Categories</h2>
 
+<!-- ✅ HIDDEN RADIO FILTERS -->
+<input type="radio" name="filter" id="show-all" checked>
+<input type="radio" name="filter" id="sea">
+<input type="radio" name="filter" id="mountains">
+<input type="radio" name="filter" id="forest">
+<input type="radio" name="filter" id="desert">
+<input type="radio" name="filter" id="city">
+<input type="radio" name="filter" id="snow">
+
+<!-- ✅ LABELS AS BUTTONS -->
 <div class="categories">
-    <button class="cat-btn active" data-filter="all">All</button>
-    <button class="cat-btn" data-filter="sea">Beaches</button>
-    <button class="cat-btn" data-filter="mountains">Mountains</button>
-    <button class="cat-btn" data-filter="forest">Forests</button>
-    <button class="cat-btn" data-filter="desert">Desert</button>
-    <button class="cat-btn" data-filter="city">City</button>
-    <button class="cat-btn" data-filter="snow">Snow</button>
+    <label class="cat-btn" for="show-all">All</label>
+    <label class="cat-btn" for="sea">Beaches</label>
+    <label class="cat-btn" for="mountains">Mountains</label>
+    <label class="cat-btn" for="forest">Forests</label>
+    <label class="cat-btn" for="desert">Desert</label>
+    <label class="cat-btn" for="city">City</label>
+    <label class="cat-btn" for="snow">Snow</label>
 </div>
 
+
+<!-- ✅ ✅ ✅ GALLERY ✅ ✅ ✅ -->
 <div class="gallery-grid">
 
     <!-- SEA -->
@@ -95,7 +107,7 @@
     </div>
 
     <div class="image-card mountains">
-        <a href="#swissalps"><img src="images/mountains/Swiss Alps Switzerland.jpg"></a>
+        <a href="#swissalps"><img src="images/mountains/Swiss Alps Switzerland.jpeg"></a>
         <p>Swiss Alps – Switzerland</p>
     </div>
 
@@ -165,8 +177,8 @@
 </div>
 
 
-<!-- ✅ MODALS - NO JAVASCRIPT -->
-
+<!-- ✅ MODALS MUST BE AFTER THE GALLERY -->
+<!-- (כמו שכבר עשית – לא שיניתי את התוכן) -->
 <!-- SEA -->
 <div id="bondi" class="modal"><div class="modal-content"><a href="#" class="close">&times;</a><img src="images/sea/Bondi Beach Australia.jpg"><h3>Bondi Beach – Australia</h3><p>One of the world's most famous surfing beaches, known for golden sand and turquoise water.</p><a class="wikilink" target="_blank" href="https://en.wikipedia.org/wiki/Bondi_Beach">Learn More</a></div></div>
 
@@ -192,7 +204,7 @@
 
 <div id="everest" class="modal"><div class="modal-content"><a href="#" class="close">&times;</a><img src="images/mountains/Mount Everest Nepal.webp"><h3>Mount Everest – Nepal</h3><p>The highest mountain on Earth, standing at 8,848m.</p><a class="wikilink" target="_blank" href="https://en.wikipedia.org/wiki/Mount_Everest">Learn More</a></div></div>
 
-<div id="swissalps" class="modal"><div class="modal-content"><a href="#" class="close">&times;</a><img src="images/mountains/Swiss Alps Switzerland.jpg"><h3>Swiss Alps – Switzerland</h3><p>Snowy peaks, ski resorts, and stunning alpine villages.</p><a class="wikilink" target="_blank" href="https://en.wikipedia.org/wiki/Swiss_Alps">Learn More</a></div></div>
+<div id="swissalps" class="modal"><div class="modal-content"><a href="#" class="close">&times;</a><img src="images/mountains/Swiss Alps Switzerland.jpeg"><h3>Swiss Alps – Switzerland</h3><p>Snowy peaks, ski resorts, and stunning alpine villages.</p><a class="wikilink" target="_blank" href="https://en.wikipedia.org/wiki/Swiss_Alps">Learn More</a></div></div>
 
 <!-- DESERT -->
 <div id="antelope" class="modal"><div class="modal-content"><a href="#" class="close">&times;</a><img src="images/desert/Antelope Canyon USA.jpg"><h3>Antelope Canyon – USA</h3><p>Narrow sandstone canyon with flowing red curves.</p><a class="wikilink" target="_blank" href="https://en.wikipedia.org/wiki/Antelope_Canyon">Learn More</a></div></div>
@@ -220,6 +232,7 @@
 <div id="norway" class="modal"><div class="modal-content"><a href="#" class="close">&times;</a><img src="images/snow/Norway Northern Lights.jpg"><h3>Norway – Northern Lights</h3><p>Colorful aurora dancing across Arctic night skies.</p><a class="wikilink" target="_blank" href="https://en.wikipedia.org/wiki/Aurora">Learn More</a></div></div>
 
 <div id="snowpeaks" class="modal"><div class="modal-content"><a href="#" class="close">&times;</a><img src="images/snow/Swiss Alps Snow Peaks.jpg"><h3>Swiss Alps – Snow Peaks</h3><p>Sharp white peaks and winter wonderland landscapes.</p><a class="wikilink" target="_blank" href="https://en.wikipedia.org/wiki/Swiss_Alps">Learn More</a></div></div>
+
 
 <footer class="footer">
     © All Rights Reserved - WorldGallery

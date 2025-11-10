@@ -563,31 +563,6 @@ html, body {
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-/* ✅ FILTER SYSTEM WITHOUT JAVASCRIPT */
-input[name="filter"] {
-    display: none;
-}
-
-/* ברירת מחדל – כשה־ALL מסומן */
-#show-all:checked ~ .gallery-grid .image-card {
-    display: flex;
-}
-
-/* כשכל קטגוריה מסומנת – הצג רק אותה */
-#sea:checked ~ .gallery-grid .image-card:not(.sea),
-#mountains:checked ~ .gallery-grid .image-card:not(.mountains),
-#forest:checked ~ .gallery-grid .image-card:not(.forest),
-#desert:checked ~ .gallery-grid .image-card:not(.desert),
-#city:checked ~ .gallery-grid .image-card:not(.city),
-#snow:checked ~ .gallery-grid .image-card:not(.snow) {
-    display: none;
-}
-
-/* כרטיס שמוצג */
-.gallery-grid .image-card {
-    display: flex;
-}
-    
 /* ✅ מגדיר את #sent כנסתר עד שהדף מגיע ל-anchor */
 #sent {
     display: none;
@@ -630,3 +605,31 @@ input[name="filter"] {
     0% { transform: scale(0.2); opacity: 0; }
     100% { transform: scale(1); opacity: 1; }
 }
+
+/* ✅ סינון ללא JS */
+input[name="filter"] {
+    display: none;
+}
+
+/* מציג הכול כרגיל */
+.gallery-grid .image-card {
+    display: flex;
+}
+
+/* כשבוחרים קטגוריה – מסתיר הכול */
+#sea:checked ~ .gallery-grid .image-card,
+#mountains:checked ~ .gallery-grid .image-card,
+#forest:checked ~ .gallery-grid .image-card,
+#desert:checked ~ .gallery-grid .image-card,
+#city:checked ~ .gallery-grid .image-card,
+#snow:checked ~ .gallery-grid .image-card {
+    display: none;
+}
+
+/* מציג תואמים */
+#sea:checked       ~ .gallery-grid .image-card.sea { display: flex; }
+#mountains:checked ~ .gallery-grid .image-card.mountains { display: flex; }
+#forest:checked    ~ .gallery-grid .image-card.forest { display: flex; }
+#desert:checked    ~ .gallery-grid .image-card.desert { display: flex; }
+#city:checked      ~ .gallery-grid .image-card.city { display: flex; }
+#snow:checked      ~ .gallery-grid .image-card.snow { display: flex; }
