@@ -562,3 +562,29 @@ html, body {
     margin: 0 auto 12px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
+
+/* ✅ FILTER SYSTEM WITHOUT JAVASCRIPT */
+input[name="filter"] {
+    display: none;
+}
+
+/* ברירת מחדל – כשה־ALL מסומן */
+#show-all:checked ~ .gallery-grid .image-card {
+    display: flex;
+}
+
+/* כשכל קטגוריה מסומנת – הצג רק אותה */
+#sea:checked ~ .gallery-grid .image-card:not(.sea),
+#mountains:checked ~ .gallery-grid .image-card:not(.mountains),
+#forest:checked ~ .gallery-grid .image-card:not(.forest),
+#desert:checked ~ .gallery-grid .image-card:not(.desert),
+#city:checked ~ .gallery-grid .image-card:not(.city),
+#snow:checked ~ .gallery-grid .image-card:not(.snow) {
+    display: none;
+}
+
+/* כרטיס שמוצג */
+.gallery-grid .image-card {
+    display: flex;
+}
+    
