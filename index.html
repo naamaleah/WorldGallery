@@ -1,35 +1,57 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WorldGallery</title>
+    <title>Home | WorldGallery</title>
     <link rel="stylesheet" href="css/style.css">
-
 </head>
+
 <body>
 
-    <header class="main-header">
-        <h1>WorldGallery</h1>
+<header class="main-header">
+    <h1>WorldGallery</h1>
 
-        <nav>
-            <ul class="nav-menu">
-                <li><a href="index.html">בית</a></li>
-                <li><a href="gallery.html">גלריה</a></li>
-                <li><a href="about.html">אודות</a></li>
-                <li><a href="contact.html">צור קשר</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <ul class="nav-menu">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="media.html">Media</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <main>
-        <h2>ברוכים הבאים ל-WorldGallery</h2>
-        <p>גלריית נופים מרחבי העולם</p>
-    </main>
+<!-- HERO SECTION -->
+<section class="hero">
+    <h2>Explore The Most Beautiful Places On Earth</h2>
+    <p>Mountains, beaches, forests and more — discover the world with us.</p>
+    
+    <a href="gallery.html" class="main-btn">Enter Gallery</a>
+</section>
+
+<!-- CATEGORY CARDS -->
+<section class="categories-preview">
+    <div class="cat-card">
+        <img src="images/sea1.jpg" alt="Sea">
+        <h3>Sea</h3>
+    </div>
+
+    <div class="cat-card">
+        <img src="images/forest1.jpg" alt="Forest">
+        <h3>Forests</h3>
+    </div>
+
+    <div class="cat-card">
+        <img src="images/mountains1.jpg" alt="Mountains">
+        <h3>Mountains</h3>
+    </div>
+</section>
+
 <footer class="footer">
-    <p>© WorldGallery</p>
+    © All Rights Reserved - WorldGallery
 </footer>
 
 </body>
-
 </html>

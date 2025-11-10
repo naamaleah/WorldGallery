@@ -1,61 +1,94 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>אודות – WorldGallery</title>
+    <title>About | WorldGallery</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <header class="main-header">
     <h1>WorldGallery</h1>
+
     <nav>
         <ul class="nav-menu">
-            <li><a href="index.html">בית</a></li>
-            <li><a href="gallery.html">גלריה</a></li>
-            <li><a href="about.html">אודות</a></li>
-            <li><a href="contact.html">צור קשר</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a class="active" href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="media.html">Media</a></li>
         </ul>
     </nav>
 </header>
 
-<main>
-    <h2>אודות האתר</h2>
-    <p>האתר מציג נופים מדהימים מרחבי העולם – הרים, חופים, יערות, חיות טבע ועוד.</p>
+<section class="about-container">
 
-    <h3>יעדים מומלצים</h3>
-    <ul>
-        <li>הרי האלפים – אירופה</li>
-        <li>יער האמזונס – דרום אמריקה</li>
-        <li>הברביקטל באפריקה</li>
+    <h2 class="page-title">About WorldGallery</h2>
+
+    <p class="about-text">
+        WorldGallery is a visual journey to the most stunning landscapes on Earth.
+        From tropical beaches and snowy mountains to magical forests and glowing cities,
+        our goal is to bring the beauty of nature to everyone.
+    </p>
+
+    <div class="about-cards">
+        <div class="about-card">
+            <h3>🌍 Global Collection</h3>
+            <p>Photos from every continent and climate zone.</p>
+        </div>
+
+        <div class="about-card">
+            <h3>📸 High-Quality Photos</h3>
+            <p>Clear, colorful and inspiring images.</p>
+        </div>
+
+        <div class="about-card">
+            <h3>✅ Easy Navigation</h3>
+            <p>Browse by category, location or mood.</p>
+        </div>
+    </div>
+
+    <!-- LIST (required in project) -->
+    <h3 class="sub-title">Popular Nature Types</h3>
+    <ul class="about-list">
+        <li>Sunny beaches</li>
+        <li>Rainforest and deep woods</li>
+        <li>Snowy mountain peaks</li>
+        <li>Deserts and sand dunes</li>
+        <li>Waterfalls and rivers</li>
     </ul>
 
-    <h3>טבלת מידע</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>מדינה</th>
-                <th>יבשת</th>
-                <th>אקלים</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>שווייץ</td>
-                <td>אירופה</td>
-                <td>קריר</td>
-            </tr>
-            <tr>
-                <td>ברזיל</td>
-                <td>דרום אמריקה</td>
-                <td>טרופי</td>
-            </tr>
-        </tbody>
+    <!-- TABLE (required in project) -->
+    <h3 class="sub-title">Famous Locations</h3>
+    <table class="about-table">
+        <tr>
+            <th>Location</th>
+            <th>Country</th>
+            <th>Type</th>
+        </tr>
+        <tr>
+            <td>Maldives</td>
+            <td>Maldives</td>
+            <td>Sea</td>
+        </tr>
+        <tr>
+            <td>Amazon Rainforest</td>
+            <td>Brazil</td>
+            <td>Forest</td>
+        </tr>
+        <tr>
+            <td>Swiss Alps</td>
+            <td>Switzerland</td>
+            <td>Mountains</td>
+        </tr>
     </table>
-</main>
+
+</section>
+
 <footer class="footer">
-    <p>© WorldGallery</p>
+    © All Rights Reserved - WorldGallery
 </footer>
 
 </body>

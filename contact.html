@@ -1,50 +1,67 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>צור קשר – WorldGallery</title>
+    <title>Contact | WorldGallery</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <header class="main-header">
     <h1>WorldGallery</h1>
+
     <nav>
         <ul class="nav-menu">
-            <li><a href="index.html">בית</a></li>
-            <li><a href="gallery.html">גלריה</a></li>
-            <li><a href="about.html">אודות</a></li>
-            <li><a href="contact.html">צור קשר</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
+            <li><a href="media.html">Media</a></li>
         </ul>
     </nav>
 </header>
 
-<main>
-    <h2>צור קשר</h2>
+<section class="contact-container">
 
+    <h2 class="page-title">Contact Us</h2>
+    <p class="contact-text">
+        Have a question, suggestion, or want to send us your photos?
+        We'd love to hear from you!
+    </p>
+
+    <!-- CONTACT FORM -->
     <form class="contact-form">
-        <label>שם:</label>
-        <input type="text" placeholder="שם מלא" required>
 
-        <label>אימייל:</label>
-        <input type="email" placeholder="example@mail.com" required>
+        <label>Full Name:</label>
+        <input type="text" placeholder="Enter your name" required>
 
-        <label>יעד אהוב:</label>
+        <label>Email:</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Choose Category:</label>
         <select>
-            <option>הרי האלפים</option>
-            <option>האיים המלדיביים</option>
-            <option>יערות הגשם</option>
+            <option>Sea</option>
+            <option>Forest</option>
+            <option>Mountains</option>
+            <option>Desert</option>
+            <option>City</option>
+            <option>Snow</option>
+            <option>Waterfalls</option>
         </select>
 
-        <label>הודעה:</label>
-        <textarea rows="4" placeholder="כתבו לנו..."></textarea>
+        <label>Message:</label>
+        <textarea placeholder="Write your message..." rows="5" required></textarea>
 
-        <button type="submit">שליחה</button>
+        <button type="submit" class="send-btn">Send Message</button>
+
     </form>
-</main>
+
+</section>
+
 <footer class="footer">
-    <p>© WorldGallery</p>
+    © All Rights Reserved - WorldGallery
 </footer>
 
 </body>
