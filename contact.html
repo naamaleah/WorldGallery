@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | WorldGallery</title>
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
@@ -31,8 +30,8 @@
         We'd love to hear from you!
     </p>
 
-    <!-- CONTACT FORM -->
-    <form class="contact-form" id="contact-form" onsubmit="showSuccess(event)">
+    <!-- ✅ אחרי שליחה, עולים לעוגן #sent -->
+    <form class="contact-form" id="contact-form" action="#sent">
         <label>Full Name:</label>
         <input type="text" placeholder="Enter your name" required>
 
@@ -45,28 +44,17 @@
         <button type="submit" class="send-btn">Send Message</button>
     </form>
 
-    <!-- ✓ Checkmark -->
-    <div id="checkmark">✓</div>
-
 </section>
+
+<!-- ✅ ה־✓ שיופיע -->
+<div id="sent">
+    <div id="checkmark">✓</div>
+    <h2 class="success-text">Message Sent Successfully!</h2>
+</div>
 
 <footer class="footer">
     © All Rights Reserved - WorldGallery
 </footer>
-
-<script>
-function showSuccess(event) {
-    event.preventDefault();
-
-    // מסתיר את הטופס ואת הטקסט
-    document.getElementById("contact-form").style.display = "none";
-    document.getElementById("form-desc").style.display = "none";
-
-    // מציג וי גדול
-    const mark = document.getElementById("checkmark");
-    mark.style.display = "block";
-}
-</script>
 
 </body>
 </html>
