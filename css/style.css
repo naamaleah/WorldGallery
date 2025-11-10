@@ -169,3 +169,59 @@ html, body {
 .main-btn:hover {
     background: #009e88;
 }
+
+.categories-preview img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-bottom: 2px solid #eee;
+}
+
+.categories-preview {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 50px 40px;
+    flex-wrap: wrap;
+}
+
+.cat-card {
+    width: 260px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+    text-align: center;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.cat-card:hover {
+    transform: scale(1.04);
+}
+
+.cat-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.cat-card h3 {
+    padding: 12px 0 5px;
+    font-size: 20px;
+    color: #00796b;
+    font-weight: 600;
+    margin: 0;
+}
+
+.cat-card p {
+    padding: 0 15px 20px;
+    font-size: 15px;
+    color: #555;
+    margin: 0;
+}
+.main-header h1 {
+    color: #00796b;      /* אותו צבע כמו הלוגו */
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+}

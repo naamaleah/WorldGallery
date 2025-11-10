@@ -25,6 +25,16 @@
 
 <h2 class="page-title">Gallery by Categories</h2>
 
+<div class="categories">
+    <button class="cat-btn active" data-filter="all">All</button>
+    <button class="cat-btn" data-filter="sea">Beaches</button>
+    <button class="cat-btn" data-filter="mountains">Mountains</button>
+    <button class="cat-btn" data-filter="forest">Forests</button>
+    <button class="cat-btn" data-filter="desert">Desert</button>
+    <button class="cat-btn" data-filter="city">City</button>
+    <button class="cat-btn" data-filter="snow">Snow</button>
+</div>
+
 <div class="gallery-grid">
 
     <!-- SEA -->
@@ -158,6 +168,31 @@
 <footer class="footer">
     © All Rights Reserved - WorldGallery
 </footer>
+<script>
+    const buttons = document.querySelectorAll(".cat-btn");
+    const cards = document.querySelectorAll(".image-card");
+
+    buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            
+            // הוספת "active" לכפתור הנלחץ
+            buttons.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+
+            // מקבל את הקטגוריה של הכפתור
+            const filter = btn.getAttribute("data-filter");
+
+            // מציג/מסתיר תמונות
+            cards.forEach(card => {
+                if (filter === "all" || card.classList.contains(filter)) {
+                    card.style.display = "flex";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    });
+</script>
 
 </body>
 </html>
