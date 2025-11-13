@@ -149,12 +149,17 @@ body {
     flex-wrap: wrap;
 }
 
+.cat-card img,
 .categories-preview img {
     width: 100%;
     height: 170px;
     object-fit: cover;
+}
+
+.categories-preview img {
     border-bottom: 2px solid #eee;
 }
+
 
 .cat-card {
     width: 260px;
@@ -170,11 +175,6 @@ body {
     transform: scale(1.04);
 }
 
-.cat-card img {
-    width: 100%;
-    height: 170px;
-    object-fit: cover;
-}
 
 .cat-card h3 {
     padding: 12px 0 5px;
