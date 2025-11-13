@@ -1,8 +1,10 @@
+/* ------------------------------
+   GLOBAL SETTINGS
+------------------------------ */
 * {
     box-sizing: border-box;
 }
 
-/* GLOBAL */
 body {
     padding-top: 60px;
     margin: 0;
@@ -14,14 +16,16 @@ body {
     min-height: 100vh;
 }
 
-/* HEADER */
+
+/* ------------------------------
+   HEADER + NAVIGATION
+------------------------------ */
 .main-header {
-    position: fixed;          /* גורם להדר להישאר במקום */
+    position: fixed; /* stays at the top */
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-
     background: #ffffff;
     border-bottom: 2px solid #cce8e2;
     padding: 20px 40px;
@@ -30,10 +34,13 @@ body {
     align-items: center;
 }
 
+.main-header h1 {
+    color: #00796b;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+}
 
-
-
-/* NAV */
 .nav-menu {
     list-style: none;
     display: flex;
@@ -55,7 +62,10 @@ body {
     border-bottom: 2px solid #00796b;
 }
 
-/* PAGE TITLE */
+
+/* ------------------------------
+   TITLES & CATEGORY BUTTONS
+------------------------------ */
 .page-title {
     text-align: center;
     margin: 45px 0 20px;
@@ -63,7 +73,6 @@ body {
     color: #008f83;
 }
 
-/* CATEGORY BUTTONS */
 .categories {
     display: flex;
     justify-content: center;
@@ -90,56 +99,10 @@ body {
     color: white;
 }
 
-/* ✅ FIXED GALLERY */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-    padding: 0 40px 80px;
-    justify-items: center;
-}
 
-.image-card {
-    width: 260px;
-    height: 260px;
-    background: white;
-    border-radius: 18px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.10);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: 0.3s ease;
-}
-
-.image-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.image-card p {
-    margin: 0;
-    padding: 10px 5px;
-    text-align: center;
-    font-size: 16px;
-}
-
-/* HOVER */
-.image-card:hover {
-    transform: scale(1.04);
-}
-
-/* FOOTER */
-.footer {
-    background: #00796b;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 15px;
-    margin-top: auto;
-}
-
-/* HOME HERO */
+/* ------------------------------
+   HOMEPAGE HERO
+------------------------------ */
 .hero {
     text-align: center;
     padding: 70px 20px 40px;
@@ -174,19 +137,23 @@ body {
     background: #009e88;
 }
 
-.categories-preview img {
-    width: 100%;
-    height: 170px;
-    object-fit: cover;
-    border-bottom: 2px solid #eee;
-}
 
+/* ------------------------------
+   HOMEPAGE CATEGORY CARDS
+------------------------------ */
 .categories-preview {
     display: flex;
     justify-content: center;
     gap: 25px;
     padding: 50px 40px;
     flex-wrap: wrap;
+}
+
+.categories-preview img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-bottom: 2px solid #eee;
 }
 
 .cat-card {
@@ -223,14 +190,117 @@ body {
     color: #555;
     margin: 0;
 }
-.main-header h1 {
-    color: #00796b;      /* אותו צבע כמו הלוגו */
-    font-size: 28px;
-    font-weight: 700;
-    margin: 0;
+
+
+/* ------------------------------
+   GALLERY GRID
+------------------------------ */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 0 40px 80px;
+    justify-items: center;
 }
 
-/* CONTACT PAGE */
+.image-card {
+    width: 260px;
+    height: 260px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease;
+}
+
+.image-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.image-card p {
+    margin: 0;
+    padding: 10px 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.image-card:hover {
+    transform: scale(1.04);
+}
+
+
+/* ------------------------------
+   MODALS (NO JS)
+------------------------------ */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal:target {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    width: 380px;
+    border-radius: 18px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+    animation: pop 0.35s ease-out;
+}
+
+.modal-content img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.close {
+    float: right;
+    font-size: 26px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.wikilink {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 16px;
+    background: #00bfa5;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.wikilink:hover {
+    background: #009e88;
+}
+
+@keyframes pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+
+/* ------------------------------
+   CONTACT PAGE
+------------------------------ */
 .contact-container {
     max-width: 650px;
     margin: auto;
@@ -296,72 +366,46 @@ body {
 }
 
 
-/* ✅ POPUP WITHOUT JAVASCRIPT */
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
+/* Contact success popup */
+#sent {
     display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-}
-
-/* מציג את החלון כשמגיעים לעוגן (#modalName) */
-.modal:target {
-    display: flex;
-}
-
-.modal-content {
-    background: white;
-    width: 380px;
-    border-radius: 18px;
-    padding: 20px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
-    animation: pop 0.35s ease-out;
+    padding: 50px 0;
 }
 
-.modal-content img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
+#sent:target {
+    display: block;
 }
 
-.close {
-    float: right;
-    font-size: 26px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
+#sent:target ~ .contact-container #contact-form,
+#sent:target ~ .contact-container #form-desc {
+    display: none;
 }
 
-.wikilink {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 16px;
+#checkmark {
+    width: 110px;
+    height: 110px;
     background: #00bfa5;
     color: white;
-    border-radius: 20px;
-    text-decoration: none;
+    border-radius: 50%;
+    font-size: 60px;
+    line-height: 110px;
+    margin: 25px auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    animation: pop 0.45s ease-out;
+}
+
+.success-text {
+    font-size: 24px;
     font-weight: bold;
-}
-
-.wikilink:hover {
-    background: #009e88;
-}
-
-@keyframes pop {
-    0% { transform: scale(0.5); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
+    color: #00796b;
+    margin-top: 10px;
 }
 
 
-
-/* ABOUT PAGE */
+/* ------------------------------
+   ABOUT PAGE
+------------------------------ */
 .about-container {
     max-width: 900px;
     margin: auto;
@@ -369,7 +413,6 @@ body {
     text-align: center;
 }
 
-/* Feature Cards */
 .about-cards {
     display: flex;
     justify-content: center;
@@ -398,9 +441,20 @@ body {
     font-weight: 600;
 }
 
+.about-icon {
+    width: 60px;
+    height: 60px;
+    background: #e9fffb;
+    color: #00bfa5;
+    border-radius: 14px;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
 
-
-/* Media cards (video | map | audio) */
 .media-card {
     max-width: 700px;
     background: white;
@@ -422,7 +476,6 @@ body {
     width: 100%;
     border-radius: 12px;
 }
-
 
 .facts-table {
     width: 100%;
@@ -452,88 +505,27 @@ body {
 .facts-table tr:hover {
     background: #d6fffa;
 }
-.about-icon {
-    width: 60px;
-    height: 60px;
-    background: #e9fffb;
-    color: #00bfa5;
-    border-radius: 14px;     /* כבר לא עיגול – ריבוע מעוגל מודרני */
-    font-size: 28px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+
+.pdf-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }
 
-/* ✅ מגדיר את #sent כנסתר עד שהדף מגיע ל-anchor */
-#sent {
-    display: none;
-    text-align: center;
-    padding: 50px 0;
-}
-
-/* ✅ כשמגיעים ל– #sent → מציג ✓ ומסתיר טופס */
-#sent:target {
-    display: block;
-}
-
-#sent:target ~ .contact-container #contact-form,
-#sent:target ~ .contact-container #form-desc {
-    display: none;
-}
-
-/* ✅ וי אנימציה */
-#checkmark {
-    width: 110px;
-    height: 110px;
-    background: #00bfa5;
-    color: white;
-    border-radius: 50%;
-    font-size: 60px;
-    line-height: 110px;
-    margin: 25px auto;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    animation: pop 0.45s ease-out;
-}
-
-.success-text {
-    font-size: 24px;
-    font-weight: bold;
-    color: #00796b;
-    margin-top: 10px;
+.pdf-mini {
+    width: 100%;
+    height: 180px;
+    border: none;
+    border-radius: 10px;
 }
 
 
-/* ✅ סינון ללא JS */
-input[name="filter"] {
-    display: none;
-}
-
-/* מציג הכול כרגיל */
-.gallery-grid .image-card {
-    display: flex;
-}
-
-/* כשבוחרים קטגוריה – מסתיר הכול */
-#sea:checked ~ .gallery-grid .image-card,
-#mountains:checked ~ .gallery-grid .image-card,
-#forest:checked ~ .gallery-grid .image-card,
-#desert:checked ~ .gallery-grid .image-card,
-#city:checked ~ .gallery-grid .image-card,
-#snow:checked ~ .gallery-grid .image-card {
-    display: none;
-}
-
-/* מציג תואמים */
-#sea:checked       ~ .gallery-grid .image-card.sea { display: flex; }
-#mountains:checked ~ .gallery-grid .image-card.mountains { display: flex; }
-#forest:checked    ~ .gallery-grid .image-card.forest { display: flex; }
-#desert:checked    ~ .gallery-grid .image-card.desert { display: flex; }
-#city:checked      ~ .gallery-grid .image-card.city { display: flex; }
-#snow:checked      ~ .gallery-grid .image-card.snow { display: flex; }
-
-
+/* ------------------------------
+   SOUND BOX
+------------------------------ */
 .sound-box {
     text-align: center;
     margin-top: 30px;
@@ -546,28 +538,37 @@ input[name="filter"] {
 }
 
 
-/* עד 900px – מצמידים יותר ומקטינים טקסטים גדולים */
-@media (max-width: 900px) {
-  .main-header { padding: 16px 20px; }
-  .hero h2 { font-size: 32px; }
-  .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; padding: 0 20px 60px; }
-  .image-card { width: 100%; height: 240px; }
-  .image-card img { height: 180px; }
-  .about-cards { gap: 16px; }
+/* ------------------------------
+   FILTER SYSTEM (NO JS)
+------------------------------ */
+input[name="filter"] {
+    display: none;
 }
 
-/* עד 600px – ניווט טורי, כפתורים גדולים, ריווח תואם מובייל */
-@media (max-width: 600px) {
-  .main-header { flex-direction: column; gap: 12px; }
-  .nav-menu { flex-wrap: wrap; gap: 12px; justify-content: center; }
-  .page-title { font-size: 26px; }
-  .categories { gap: 8px; }
-  .cat-btn { padding: 8px 14px; font-size: 14px; }
-  .categories-preview { padding: 30px 16px; gap: 16px; }
-  .cat-card { width: 100%; }
-  .contact-container { padding: 40px 16px 60px; }
+.gallery-grid .image-card {
+    display: flex;
 }
 
+#sea:checked ~ .gallery-grid .image-card,
+#mountains:checked ~ .gallery-grid .image-card,
+#forest:checked ~ .gallery-grid .image-card,
+#desert:checked ~ .gallery-grid .image-card,
+#city:checked ~ .gallery-grid .image-card,
+#snow:checked ~ .gallery-grid .image-card {
+    display: none;
+}
+
+#sea:checked       ~ .gallery-grid .image-card.sea { display: flex; }
+#mountains:checked ~ .gallery-grid .image-card.mountains { display: flex; }
+#forest:checked    ~ .gallery-grid .image-card.forest { display: flex; }
+#desert:checked    ~ .gallery-grid .image-card.desert { display: flex; }
+#city:checked      ~ .gallery-grid .image-card.city { display: flex; }
+#snow:checked      ~ .gallery-grid .image-card.snow { display: flex; }
+
+
+/* ------------------------------
+   CONTACT LIST ITEMS
+------------------------------ */
 .contact-list {
     list-style: none;
     padding: 0;
@@ -586,18 +587,43 @@ input[name="filter"] {
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-.pdf-container {
-    max-width: 600px;
-    margin: 20px auto;
-    background: white;
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+.footer {
+    background: #00796b;
+    color: white;
+    text-align: center;
     padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    font-size: 15px;
+    margin-top: auto;
 }
 
-.pdf-mini {
-    width: 100%;
-    height: 180px;
-    border: none;
-    border-radius: 10px;
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+@media (max-width: 900px) {
+    .main-header { padding: 16px 20px; }
+    .hero h2 { font-size: 32px; }
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 18px;
+        padding: 0 20px 60px;
+    }
+    .image-card { width: 100%; height: 240px; }
+    .image-card img { height: 180px; }
+    .about-cards { gap: 16px; }
+}
+
+@media (max-width: 600px) {
+    .main-header { flex-direction: column; gap: 12px; }
+    .nav-menu { flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .page-title { font-size: 26px; }
+    .categories { gap: 8px; }
+    .cat-btn { padding: 8px 14px; font-size: 14px; }
+    .categories-preview { padding: 30px 16px; gap: 16px; }
+    .cat-card { width: 100%; }
+    .contact-container { padding: 40px 16px 60px; }
 }
