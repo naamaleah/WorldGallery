@@ -30,11 +30,7 @@ html, body {
 }
 
 
-.logo {
-    font-size: 26px;
-    font-weight: 700;
-    color: #00796b;
-}
+
 
 /* NAV */
 .nav-menu {
@@ -645,20 +641,7 @@ input[name="filter"] {
     margin-bottom: 10px;
 }
 
-.sound-btn {
-    background: #008f83;
-    color: white;
-    border: none;
-    padding: 12px 22px;
-    font-size: 17px;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: 0.2s;
-}
 
-.sound-btn:hover {
-    background: #049e6a;
-}
 
 /* עד 900px – מצמידים יותר ומקטינים טקסטים גדולים */
 @media (max-width: 900px) {
