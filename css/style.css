@@ -675,3 +675,20 @@ input[name="filter"] {
   .contact-container { padding: 40px 16px 60px; }
 }
 
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto 35px;
+    max-width: 600px;
+    text-align: left;
+}
+
+.contact-list li {
+    background: #e9fffb;
+    padding: 12px 18px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    color: #00796b;
+    font-size: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
