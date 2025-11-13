@@ -31,18 +31,19 @@
     </p>
 
     <!-- ✅ אחרי שליחה, עולים לעוגן #sent -->
-    <form class="contact-form" id="contact-form" action="#sent">
-        <label>Full Name:</label>
-        <input type="text" placeholder="Enter your name" required>
+ <form class="contact-form" id="contact-form" action="#sent" method="get">
+  <label for="full-name">Full Name:</label>
+  <input id="full-name" name="full_name" type="text" placeholder="Enter your name" required>
 
-        <label>Email:</label>
-        <input type="email" placeholder="Enter your email" required>
+  <label for="email">Email:</label>
+  <input id="email" name="email" type="email" placeholder="Enter your email" required>
 
-        <label>Message:</label>
-        <textarea placeholder="Write your message..." rows="5" required></textarea>
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" placeholder="Write your message..." rows="5" required></textarea>
 
-        <button type="submit" class="send-btn">Send Message</button>
-    </form>
+  <button type="submit" class="send-btn">Send Message</button>
+</form>
+
 
 </section>
 
