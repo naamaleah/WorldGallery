@@ -160,14 +160,31 @@ body {
     border-bottom: 2px solid #eee;
 }
 
+.cat-card,
+.image-card{
+     width: 260px;
+     background: white;
+     border-radius: 18px;
+     box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+      overflow: hidden;
+      transition: 0.3s ease;
+}
 
 .cat-card {
-    width: 260px;
-    background: white;
-    border-radius: 18px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.10);
     text-align: center;
-    overflow: hidden;
+}
+.image-card {
+    height: 260px;
+    display: flex;
+    flex-direction: column;  
+}
+
+.about-card {
+    width: 200px;
+    background: white;
+    padding: 25px 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
     transition: 0.3s ease;
 }
 
@@ -203,17 +220,7 @@ body {
     justify-items: center;
 }
 
-.image-card {
-    width: 260px;
-    height: 260px;
-    background: white;
-    border-radius: 18px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.10);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: 0.3s ease;
-}
+
 
 .image-card img {
     width: 100%;
@@ -421,14 +428,7 @@ body {
     margin-bottom: 40px;
 }
 
-.about-card {
-    width: 200px;
-    background: white;
-    padding: 25px 20px;
-    border-radius: 18px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-    transition: 0.3s ease;
-}
+
 
 .about-card:hover {
     transform: scale(1.04);
