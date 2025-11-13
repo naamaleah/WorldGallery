@@ -1,5 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
 /* GLOBAL */
 body {
+    padding-top: 60px;
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: #f5f9f8;
@@ -7,10 +12,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-html, body {
-    height: 100%;
 }
 
 /* HEADER */
@@ -295,21 +296,6 @@ html, body {
 }
 
 
-#checkmark {
-    display: none;
-    width: 100px;
-    height: 100px;
-    background: #00bfa5;
-    color: white;
-    border-radius: 50%;
-    font-size: 60px;
-    text-align: center;
-    line-height: 100px;
-    margin: 25px auto;
-    animation: pop 0.45s ease-out;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
 /* ✅ POPUP WITHOUT JAVASCRIPT */
 .modal {
     position: fixed;
@@ -343,7 +329,6 @@ html, body {
     width: 100%;
     height: 220px;
     object-fit: cover;
-    border-radius: 10px;
 }
 
 .close {
@@ -374,25 +359,7 @@ html, body {
     100% { transform: scale(1); opacity: 1; }
 }
 
-/* ✅ מידע בתוך כרטיס */
-.card-info {
-    padding: 10px 12px;
-    text-align: center;
-}
 
-.card-info h4 {
-    margin: 0;
-    font-size: 17px;
-    color: #00796b;
-    font-weight: 600;
-}
-
-.card-info p {
-    margin: 6px 0 0;
-    font-size: 14px;
-    color: #555;
-    line-height: 1.25;
-}
 
 /* ABOUT PAGE */
 .about-container {
@@ -431,70 +398,7 @@ html, body {
     font-weight: 600;
 }
 
-/* Icon Circle */
-.about-icon {
-    width: 60px;
-    height: 60px;
-    background: #d6fffa;
-    color: #00796b;
-    border-radius: 50%;
-    font-size: 30px;
-    line-height: 60px;
-    margin: 0 auto 10px;
-}
 
-/* Tag list */
-.about-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding: 0;
-    margin-bottom: 40px;
-}
-
-.about-list li {
-    list-style: none;
-    background: #d6fffa;
-    color: #00796b;
-    padding: 8px 15px;
-    border-radius: 18px;
-    font-weight: 500;
-    font-size: 15px;
-}
-
-/* Famous locations as cards */
-.locations-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
-    margin-bottom: 45px;
-}
-
-.location-box {
-    background: white;
-    border-radius: 18px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.10);
-    padding: 18px;
-    transition: 0.3s ease;
-}
-
-.location-box:hover {
-    transform: scale(1.04);
-}
-
-.location-box h4 {
-    margin: 0;
-    font-size: 20px;
-    color: #00796b;
-    font-weight: 600;
-}
-
-.location-box p {
-    color: #555;
-    font-size: 15px;
-    margin: 6px 0 0;
-}
 
 /* Media cards (video | map | audio) */
 .media-card {
@@ -640,7 +544,6 @@ input[name="filter"] {
     color: #008f83;
     margin-bottom: 10px;
 }
-
 
 
 /* עד 900px – מצמידים יותר ומקטינים טקסטים גדולים */
